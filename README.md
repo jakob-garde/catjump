@@ -2,6 +2,6 @@
 
 This is an exercise in writing game logics.
 
-# project template
+Based on the raylib example game template.
 
-Based on the raylib game example template
+Assets from https://oboropixel.itch.io/character-animations
