@@ -187,7 +187,12 @@ int main(void) {
     game.levels.Add( LoadLevel01(&a_life, animations) );
     game.levels.Add( LoadLevel02(&a_life, animations) );
     game.levels.Add( LoadLevel03(&a_life, animations) );
-    //game.levels.Add( LoadLevel04(&a_life, animations) );
+    game.levels.Add( LoadLevel04(&a_life, animations) );
+    game.levels.Add( LoadLevel05(&a_life, animations) );
+    game.levels.Add( LoadLevel06(&a_life, animations) );
+    game.levels.Add( LoadLevel07(&a_life, animations) );
+    game.levels.Add( LoadLevel08(&a_life, animations) );
+
     game.SetLevel(0);
     game.state = GS_TITLESCREEN;
 
@@ -196,7 +201,7 @@ int main(void) {
 
     // DBG
     //game.state = GS_GAME;
-    //game.SetLevel(3);
+    //game.SetLevel(8);
 
     // loop
     while (!WindowShouldClose()) {
@@ -243,7 +248,7 @@ int main(void) {
             BeginDrawing();
 
             ClearBackground(BLACK);
-            DrawTextCenterX("THE END", 36, 0);
+            DrawTextCenterX("THE END", 36, -36);
 
             EndDrawing();
         }

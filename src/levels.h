@@ -188,5 +188,114 @@ CatLevel LoadLevel03(MArena *a, Array<Animation> animations) {
     return level;
 }
 
+CatLevel LoadLevel04(MArena *a, Array<Animation> animations) {
+    CatLevel level = {};
+    level.entities = InitArray<Entity>(a, 64);
+    LoadLevelDefaults(&level, animations);
+    LoadColumnWalls(&level.entities);
+
+    level.trapdoor->anchor = GetGridAnchor(0, 0);
+    level.portal->anchor = GetGridAnchor(grid_w_max - 1, 2);
+
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 3), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 4), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 5), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 6), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 7), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 8), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 9), grid_w * 1.2 ) );
+
+    level.entities.Add( InitPlatform( GetGridAnchor(grid_w_max - 1.2, 3), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(grid_w_max - 1.2, 4), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(grid_w_max - 1.2, 5), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(grid_w_max - 1.2, 6), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(grid_w_max - 1.2, 7), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(grid_w_max - 1.2, 8), grid_w * 1.2 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(grid_w_max - 1.2, 9), grid_w * 1.2 ) );
+
+    return level;
+}
+
+CatLevel LoadLevel05(MArena *a, Array<Animation> animations) {
+    CatLevel level = {};
+    level.entities = InitArray<Entity>(a, 64);
+    LoadLevelDefaults(&level, animations);
+    LoadColumnWalls(&level.entities);
+
+    level.trapdoor->anchor = GetGridAnchor(0, 0);
+    level.portal->anchor = GetGridAnchor(grid_w_max - 1, 2);
+
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 3), grid_w * 1 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(3, 2), grid_w * 1 ) );
+
+    level.entities.Add( InitPlatform( GetGridAnchor(grid_w_max - 1, 3), grid_w * 1 ) );
+
+    return level;
+}
+
+CatLevel LoadLevel06(MArena *a, Array<Animation> animations) {
+    CatLevel level = {};
+    level.entities = InitArray<Entity>(a, 64);
+    LoadLevelDefaults(&level, animations);
+    LoadColumnWalls(&level.entities);
+
+    level.trapdoor->anchor = GetGridAnchor(0, 0);
+    level.portal->anchor = GetGridAnchor(grid_w_max - 1, 2);
+
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 3), grid_w * 1 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(4.8, 4), grid_w * 1 ) );
+
+    level.entities.Add( InitPlatform( GetGridAnchor(4.8, 3), grid_w * 2.2 ) );
+
+    return level;
+}
+
+CatLevel LoadLevel07(MArena *a, Array<Animation> animations) {
+    CatLevel level = {};
+    level.entities = InitArray<Entity>(a, 64);
+    LoadLevelDefaults(&level, animations);
+    LoadColumnWalls(&level.entities);
+
+    level.trapdoor->anchor = GetGridAnchor(0, 0);
+    level.portal->anchor = GetGridAnchor(grid_w_max - 1, 0);
+
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 7), grid_w * 1 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 8), grid_w * 2 ) );
+
+    level.entities.Add( InitPlatform( GetGridAnchor(4.8, 8), grid_w * 0.5 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(6, 7), grid_w * 0.5 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(4.8, 6), grid_w * 0.5 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(6, 5), grid_w * 0.5 ) );
+
+    level.entities.Add( InitPlatform( GetGridAnchor(4.8, 4), grid_w * 0.5 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(6, 3), grid_w * 0.5 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(4.8, 2), grid_w * 0.5 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(4.8, 1), grid_w * 2.2 ) );
+
+    return level;
+}
+
+CatLevel LoadLevel08(MArena *a, Array<Animation> animations) {
+    CatLevel level = {};
+    level.entities = InitArray<Entity>(a, 64);
+    LoadLevelDefaults(&level, animations);
+    LoadColumnWalls(&level.entities);
+
+    level.trapdoor->anchor = GetGridAnchor(0, 0);
+    level.portal->anchor = GetGridAnchor(grid_w_max - 1, 0);
+
+    level.entities.Add( InitPlatform( GetGridAnchor(0, 3), grid_w * 1 ) );
+
+    level.entities.Add( InitPlatform( GetGridAnchor(4.8, 6), grid_w * 0.5 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(6.5, 5), grid_w * 0.5 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(6.5, 4), grid_w * 0.5 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(6.5, 3), grid_w * 0.5 ) );
+
+    level.entities.Add( InitPlatform( GetGridAnchor(4.8, 2), grid_w * 0.5 ) );
+    level.entities.Add( InitPlatform( GetGridAnchor(4.8, 1), grid_w * 2.2 ) );
+
+
+    return level;
+}
 
 #endif
