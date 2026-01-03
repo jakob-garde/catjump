@@ -33,6 +33,8 @@ Entity InitCatEntity(s32 frame_sz) {
 Entity InitTrapdoorEntity(s32 frame_sz) {
     Entity trapdoor = {};
     trapdoor.tpe = ET_TRAPDOOR;
+
+    trapdoor.facing_right = true;
     trapdoor.ani_cnt = 1;
     trapdoor.ani_idx = 0;
     trapdoor.ani_idx0 = 0;
@@ -49,6 +51,7 @@ Entity InitPortalEntity(s32 frame_sz) {
     Entity portal = {};
     portal.tpe = ET_PORTAL;
 
+    portal.facing_right = true;
     portal.ani_cnt = 1;
     portal.ani_idx = 0;
     portal.ani_idx0 = 0;

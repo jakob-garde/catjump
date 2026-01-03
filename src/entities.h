@@ -39,8 +39,7 @@ struct Frame {
 
     Frame Mirror() {
         Frame flipped = *this;
-        flipped.source.width = -flipped.source.width;
-        flipped.source.x = source.x + source.width;
+        flipped.source.width = - flipped.source.width;
         return flipped;
     }
 };

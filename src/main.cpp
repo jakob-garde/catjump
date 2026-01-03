@@ -153,7 +153,6 @@ void DrawTextCenterX(const char* text, s32 fontsize, s32 offset_y) {
 
 void OnWindowResize() {
     s32 window_w = GetScreenWidth();
-    s32 window_h = GetScreenHeight();
 
     cam.offset = { (window_w - col_width/2) / 2 / cam.zoom, 0 / cam.zoom };
 }
@@ -175,7 +174,6 @@ int main(void) {
     }
 
     SetTargetFPS(60);
-    u64 frameno = 0;
     f32 dt = 0;
     InitInput();
 
@@ -205,7 +203,6 @@ int main(void) {
 
     // loop
     while (!WindowShouldClose()) {
-        frameno++;
         dt = GetFrameTime() * 1000;
 
         // why is this so verbose?
@@ -273,8 +270,12 @@ int main(void) {
             }
 
             if (cat_fall) {
-                game.SetTransition(0);
-                continue;;
+                s32 to = 0;
+                if (game.level_at > 0) {
+                    to = game.level_at - 1;
+                }
+                game.SetTransition(to);
+                continue;
             }
 
             game.Update(dt);
